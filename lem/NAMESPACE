@@ -1,0 +1,7 @@
+import(methods)
+import(stats)
+import(e1071)
+
+S3method(print, lem)
+export(lem, simulateLEM)
+
