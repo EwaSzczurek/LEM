@@ -2,13 +2,14 @@
 enumerate.models <- function(x,name=NULL, trans.close=TRUE, verbose=TRUE) {
 
 if (length(x) == 1) {
-            n <- as.numeric(x)
-	    if(is.null(name))
-            	name <- paste("g",1:n, sep="")
-        } else {
-           n <- length(x)
-           name <- x
-        }
+	n <- as.numeric(x)
+	if(is.null(name)){
+		name <- giveNames(n)
+	}
+} else {
+	n <- length(x)
+    name <- x
+}
 
 #------------------
 # Sanity checks    
