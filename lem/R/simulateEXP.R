@@ -13,7 +13,7 @@ simulateEXP <- function( n, rep.no, up.to=3){
 	m = m*rep.no
 	
 	E = matrix(0, ncol = n, nrow= m)
-	colnames(E) = paste("g",1:n, sep="")
+	colnames(E) = giveNames(n)
 	e.double = rep.no*n + 1
 	
 	for( i in seq(1, n-1)){
